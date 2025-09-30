@@ -1,17 +1,18 @@
 print ("MASUKKAN NAMA DAN NIM SESUAI DENGAN DATA DIRI ANDA")
 print ("MASUKKAN NAMA ANDA (WAJIB CAPSLOCK)")
 
+UKT = 6000000
 NAMA = input()
 if NAMA == "RISMAYANTY":
     print ("MASUKKAN NIM ANDA")
     NIM = input()
     if NIM == "2509106102":
-        print ("MASUKKAN JUMLAH UKT ANDA TERLEBIH DAHULU")
-        UKT = int(input())
         print ("BERIKUT OPSI PEMBAYARAN UKT ANDA")
-        print("1. LUNAS (1%)\n2. CICILAN 2x (5%)\n3. CICILAN 4x (8%)\n4. CICILAN 6x (12%)")
+        print ("1. LUNAS (Sekali Bayar): BADMINISTRASI (1%)")
+        print ("2. CICILAN 2x per Semester: ADMINISTRASI (5%)")
+        print ("3. CICILAN 4x per Semester: ADMINISTRASI (8%)")
+        print ("4. CICILAN 6x per Semester: ADMINISTRASI (12%)")
 
-        
 
         OPSI = int(input())
         if OPSI == 1:

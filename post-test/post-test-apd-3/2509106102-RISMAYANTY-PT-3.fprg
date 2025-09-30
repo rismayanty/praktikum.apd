@@ -4,15 +4,16 @@
         <attribute name="name" value="flowchart pt 3"/>
         <attribute name="authors" value="HP"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-09-30 04:38:33 PM"/>
+        <attribute name="saved" value="2025-09-30 07:21:45 PM"/>
         <attribute name="created" value="SFA7U0hJTkU7MjAyNS0wOS0yOTswNDo0MjoyMiBQTTsxODE0"/>
-        <attribute name="edited" value="SFA7U0hJTkU7MjAyNS0wOS0zMDswNDozODozMyBQTTs4NjsxOTgy"/>
+        <attribute name="edited" value="SFA7U0hJTkU7MjAyNS0wOS0zMDswNzoyMTo0NSBQTTs5MzsxOTc4"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="ADMIN, CICILAN, UKT, TOTAL" type="Real" array="False" size=""/>
-            <declare name="OPSI, LUNAS" type="Integer" array="False" size=""/>
+            <declare name="ADMIN, CICILAN, TOTAL" type="Real" array="False" size=""/>
+            <declare name="OPSI, LUNAS, UKT" type="Integer" array="False" size=""/>
+            <assign variable="UKT" expression="6000000"/>
             <declare name="NAMA, NIM" type="String" array="False" size=""/>
             <output expression="&quot;MASUKKAN NAMA DAN NIM SESUAI DENGAN DATA DIRI ANDA&quot;" newline="True"/>
             <output expression="&quot;MASUKKAN NAMA ANDA (WAJIB CAPSLOCK)&quot;" newline="True"/>
@@ -23,19 +24,17 @@
                     <input variable="NIM"/>
                     <if expression="NIM = &quot;2509106102&quot;">
                         <then>
-                            <output expression="&quot;MASUKKAN JUMLAH UKT ANDA TERLEBIH DAHULU&quot;" newline="True"/>
-                            <input variable="UKT"/>
                             <output expression="&quot;BERIKUT OPSI PEMBAYARAN UKT ANDA:&quot;" newline="True"/>
-                            <output expression="&quot;1. LUNAS (1%)&quot;" newline="True"/>
-                            <output expression="&quot;2. CICILAN 2x (5%)&quot;" newline="True"/>
-                            <output expression="&quot;3. CICILAN 4x (8%)&quot;" newline="True"/>
-                            <output expression="&quot;4. CICILAN 6x (12%)&quot;" newline="True"/>
+                            <output expression="&quot;1. LUNAS (Sekali Bayar): ADMIN(1%)&quot;" newline="True"/>
+                            <output expression="&quot;2. CICILAN 2x per Semester: ADMIN(5%)&quot;" newline="True"/>
+                            <output expression="&quot;3. CICILAN 4x per Semester: ADMIN(8%)&quot;" newline="True"/>
+                            <output expression="&quot;4. CICILAN 6x per Semester: ADMIN(12%)&quot;" newline="True"/>
                             <input variable="OPSI"/>
                             <if expression="OPSI == 1">
                                 <then>
                                     <assign variable="ADMIN" expression="0.01"/>
                                     <assign variable="TOTAL" expression="UKT + (UKT * ADMIN)"/>
-                                    <output expression="TOTAL" newline="True"/>
+                                    <output expression="&quot;TOTAL : Rp&quot; &amp; TOTAL" newline="True"/>
                                 </then>
                                 <else>
                                     <if expression="OPSI == 2">
@@ -43,7 +42,7 @@
                                             <assign variable="ADMIN" expression="0.05"/>
                                             <assign variable="TOTAL" expression="UKT + (UKT * ADMIN)"/>
                                             <assign variable="CICILAN" expression="TOTAL / 2"/>
-                                            <output expression="CICILAN" newline="True"/>
+                                            <output expression="&quot;TOTAL: Rp&quot; &amp; TOTAL &amp;&quot; CICILANNYA :&quot; &amp; CICILAN" newline="True"/>
                                         </then>
                                         <else>
                                             <if expression="OPSI == 3">
@@ -51,7 +50,7 @@
                                                     <assign variable="ADMIN" expression="0.08"/>
                                                     <assign variable="TOTAL" expression="UKT + (UKT * ADMIN)"/>
                                                     <assign variable="CICILAN" expression="TOTAL / 4"/>
-                                                    <output expression="CICILAN" newline="True"/>
+                                                    <output expression="&quot;TOTAL: Rp&quot; &amp; TOTAL &amp;&quot; CICILANNYA :&quot; &amp; CICILAN" newline="True"/>
                                                 </then>
                                                 <else>
                                                     <if expression="OPSI == 4">
@@ -59,7 +58,7 @@
                                                             <assign variable="ADMIN" expression="0.12"/>
                                                             <assign variable="TOTAL" expression="UKT + (UKT * ADMIN)"/>
                                                             <assign variable="CICILAN" expression="TOTAL / 6"/>
-                                                            <output expression="CICILAN" newline="True"/>
+                                                            <output expression="&quot;TOTAL: Rp&quot; &amp; TOTAL &amp;&quot; CICILANNYA :&quot; &amp; CICILAN" newline="True"/>
                                                         </then>
                                                         <else/>
                                                     </if>
