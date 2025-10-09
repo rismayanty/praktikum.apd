@@ -132,7 +132,7 @@ while PERCOBAAN < LIMIT_PERCOBAAN:
                 if JUMLAH == "": 
                     input_isinya_angka_semua = False
                 else:
-                    for setiap_karakter in JUMLAH:
+                    for setiap_karakter in JUMLAH:44
                         if setiap_karakter not in "0123456789":
                             input_isinya_angka_semua = False
                             break
