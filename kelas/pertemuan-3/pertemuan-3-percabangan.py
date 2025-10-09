@@ -11,30 +11,33 @@ print("total gtarif listrik yang harus dibayar: Rp", tarif)
 
 
 
-/ternary operator
-nilai = 70
-if nilai = 60:
-status = "Lulus"
-else:
-status = "Tidak Lulus"
-print(status)
+# ternary operator
+
+# nilai = 70
+# if nilai = 60:
+# status = "Lulus"
+# else:
+# status = "Tidak Lulus"
+# print(status)
 
 
-/Menggunakan Ternary Operator
-nilai = 70
-status = "Lulus" if nilai = 60 else "Tidak Lulus"
-print(status)
+# Menggunakan Ternary Operator
+
+# nilai = 70
+# status = "Lulus" if nilai = 60 else "Tidak Lulus"
+# print(status)
 
 
-/pertemuan3
-nilai = int (input("masukkan nilai:"))
 
-if nilai >=80:
-    print ("Nilai A")
-elif nilai >=70:
-    print ("Nilai B")  
-elif nilai >=60:
-    print ("Nilai C")
-else:
-    print ("tidak lulus")
+# pertemuan3
+
+# nilai = int (input("masukkan nilai:"))
+# if nilai >=80:
+#     print ("Nilai A")
+# elif nilai >=70:
+#     print ("Nilai B")  
+# elif nilai >=60:
+#     print ("Nilai C")
+# else:
+#     print ("tidak lulus")
 

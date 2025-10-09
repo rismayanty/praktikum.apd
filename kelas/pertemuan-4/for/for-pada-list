@@ -2,5 +2,5 @@
 # for i in menumakanan:
 #     print(i)
 
-for i in "2345":
+for i in "bakso":
     print (i)
