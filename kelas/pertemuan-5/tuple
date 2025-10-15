@@ -10,7 +10,7 @@
 # print(anggota[-1])
 
 # ('samarinda', 12)
-# manggil elemen di dalam nested tuple
+# manggil elemen di gdalam nested tuple
 # print(anggota[5][0])
 
 
