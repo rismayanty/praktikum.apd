@@ -1,0 +1,8 @@
+# KONVERSI TIPE DATA
+num = int("42")        
+name = str(123)        
+data = list("abc")     
+data = dict(a=1, b=2)
+
+print(type(num)) 
+
